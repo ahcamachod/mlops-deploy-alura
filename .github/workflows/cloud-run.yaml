@@ -24,7 +24,7 @@ env:
   REGION: southamerica-east1
   BASIC_AUTH_USERNAME: ${{ secrets.BASIC_AUTH_USERNAME }}
   BASIC_AUTH_PASSWORD: ${{ secrets.BASIC_AUTH_PASSWORD }} 
-  CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+  
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -50,7 +50,7 @@ jobs:
     - id: 'auth'
       uses: 'google-github-actions/auth@v0'
       with:
-        credentials_json: ${{ env.CREDENTIALS }}
+        credentials_json: '${{ secrets.GCP_SA_KEY }}'
 
     # Setup gcloud CLI
     - name: Set up Cloud SDK
