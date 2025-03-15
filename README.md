@@ -1,7 +1,7 @@
-mlops-deploy-alura
+mlops-deploy-fiap
 ==============================
 
-Estrategias para el deploy de modelos de machine learning de Alura Latam.
+Deploy de modelos de ML usando CI/CD.
 
 Project Organization
 ------------
